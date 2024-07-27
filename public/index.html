@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="build/tailwind.css">
 </head>
 <body class="bg-blue-400 h-screen flex-col space-y-4 flex justify-center items-center">
-    <div class="" x-data="{tab : 'tabOne'} ">
+    <div class="" x-data="{tabOne : true} ">
         <!-- header -->
-        <div class="bg-opacity-10 bg-black flex justify-between max-w-md p-1.5 gap-x-2 rounded-lg font-bold ">
-            <span @click="tab = 'tabOne'" class="hover:bg-blue-400 flex justify-center text-white rounded-lg cursor-pointer flex-1 p-2">Recent</span>
-            <span @click="tab = 'tabTwo'" class="hover:bg-blue-400 flex justify-center text-white rounded-lg cursor-pointer flex-1 p-2">Popular</span>
-            <span @click="tab = 'tabTree'" class="hover:bg-blue-400 flex justify-center text-white rounded-lg cursor-pointer flex-1 p-2">Trending</span>
+        <div class="bg-opacity-10 bg-black flex justify-between max-w-md p-1 gap-x-2 rounded-lg font-bold ">
+            <button  @click="tabOne = true " class="flex w-full justify-center text-white rounded-lg cursor-pointer p-2 hover:bg-blue-400 focus:bg-white focus:text-blue-500 focus:ring-2 focus:ring-blue-300">Recent</button   >
+            <button  @click="tabTwo = true " class="flex w-full justify-center text-white rounded-lg cursor-pointer p-2 hover:bg-blue-400 focus:bg-white focus:text-blue-500 focus:ring-2 focus:ring-blue-300">Popular</button   >
+            <button  @click="tabTree = true " class="flex w-full justify-center text-white rounded-lg cursor-pointer p-2 hover:bg-blue-400 focus:bg-white focus:text-blue-500 focus:ring-2 focus:ring-blue-300">Trending</button >
         </div>
 
         <!-- content -->
         <div class="rounded-lg flex flex-col bg-slate-100 p-2 mt-5 w-96 ">
-            <div x-show="tab == 'tabOne'" class="space-y-2 ">
+            <div x-show="tabOne" class="space-y-2 ">
                 <div class="hover:bg-slate-200 p-4 rounded-lg cursor-pointer ">  
-                    <p>is tech making better or worse ?</p>
-                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                    <p>is tech making better 1 or worse ?</p>
+                    <p class="text-gray-400">jun 7 . 29 comment . 12char</p>
                 </div>
                 <div class="hover:bg-slate-200 p-4 rounded-lg cursor-pointer ">
                     <p>is tech making better or worse ?</p>
-                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                    <p class="text-gray-400">jun 7 . 29 comment . 12char</p>
+                </div>
+            </div>
+            <div x-show="tabTwo" class="space-y-2 ">
+                <div class="hover:bg-slate-200 p-4 rounded-lg cursor-pointer ">  
+                    <p>is tech making better 2 f worse ?</p>
+                    <p class="text-gray-400">jun 7 . 29 comment . 12char</p>
+                </div>
+                <div class="hover:bg-slate-200 p-4 rounded-lg cursor-pointer ">
+                    <p>is tech making better or worse ?</p>
+                    <p class="text-gray-400">jun 7 . 29 comment . 12char</p>
                 </div>
             </div>
         </div> 
