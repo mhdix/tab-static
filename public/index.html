@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>tab</title>
+    <link rel="stylesheet" href="build/tailwind.css">
+</head>
+<body class="bg-blue-400 h-screen flex-col space-y-4 flex justify-center items-center">
+    <div class="" x-data="{tab : 'tabOne'} ">
+        <!-- header -->
+        <div class="bg-opacity-10 bg-black flex justify-between w-96 py-3 p-5 rounded-lg">
+            <span @click="tab = 'tabOne'" class="text-white">Recent</span>
+            <span @click="tab = 'tabTwo'" class="text-white">Popular</span>
+            <span @click="tab = 'tabTree'" class="text-white">Trending</span>
+        </div>
+
+        <!-- content -->
+        <div class="rounded-lg flex flex-col bg-slate-100 p-5 mt-5 w-96 space-y-6">
+            <div x-show="tab == 'tabOne'">
+                <div>
+                    <p>is tech making better or worse ?1</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+                <div class="">
+                    <p>is tech making better or worse ?</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+            </div>
+
+            <div x-show="tab == 'tabTwo'">
+                <div>
+                    <p>is tech making better or worse ?2</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+                <div class="">
+                    <p>is tech making better or worse ?</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+            </div>
+            
+            <div x-show="tab == 'tabTree'">
+                <div>
+                    <p>is tech making better or worse ?3</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+                <div class="">
+                    <p>is tech making better or worse ?</p>
+                    <p class="text-xs opacity-65">jun 7 . 29 comment . 12char</p>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
